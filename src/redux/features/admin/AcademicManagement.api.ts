@@ -1,5 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { TAcademicDepartment, TAcademicFaculty, TAcademicSemester } from "../../../types/academicManagement/academicSemester.type";
+import {
+  TAcademicDepartment,
+  TAcademicFaculty,
+  TAcademicSemester,
+} from "../../../types/academicManagement/academicSemester.type";
 import { TResponseRedux } from "../../../types/global.types";
 import { baseApi } from "../../api/baseApi";
 
@@ -72,5 +76,11 @@ const academicManagementApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetAllSemesterQuery, useAddAcademicSemesterMutation,useGetAcademicDepartmentsQuery } =
-  academicManagementApi;
+export const {
+  useGetAllSemesterQuery,
+  useAddAcademicSemesterMutation,
+  useGetAcademicDepartmentsQuery,
+  useAddAcademicFacultyMutation,
+  useGetAcademicFacultiesQuery,
+  useAddAcademicDepartmentMutation,
+} = academicManagementApi;

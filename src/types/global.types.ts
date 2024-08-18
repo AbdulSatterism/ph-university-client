@@ -19,7 +19,7 @@ export type TMeta = {
 };
 
 export type TResponse<T> = {
-  data?: T;
+  data?: T | any;
   error?: TError;
   meta?: TMeta;
   message: string;
