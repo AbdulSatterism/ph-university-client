@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button, Col, Flex } from "antd";
 import PHForm from "../../../components/form/PHForm";
 import PHSelect from "../../../components/form/PHSelect";
@@ -31,7 +32,9 @@ const CreateAcademicDepartment = () => {
     };
 
     try {
-      const result = (await addAcademicDepartment(departmentData)) as TResponse;
+      const result = (await addAcademicDepartment(
+        departmentData
+      )) as TResponse<any>;
       if (result?.error) {
         toast.error(result?.error?.data?.message, { id: toastId });
       } else {

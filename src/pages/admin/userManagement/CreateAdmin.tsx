@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button, Col, Divider, Form, Input, Row } from "antd";
 import PHForm from "../../../components/form/PHForm";
 import PHInput from "../../../components/form/PHInput";
@@ -24,7 +25,7 @@ const CreateAdmin = () => {
     formData.append("file", data.profileImage);
 
     try {
-      const result = (await addAdmin(formData)) as TResponse;
+      const result = (await addAdmin(formData)) as TResponse<any>;
       if (result?.error) {
         toast.error(result?.error?.data?.message, { id: toastId });
       } else {

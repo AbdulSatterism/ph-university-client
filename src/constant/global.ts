@@ -31,3 +31,10 @@ export const bloodGroupOptions = bloodGroups.map((item) => ({
   value: item,
   label: item,
 }));
+
+const weekDays = ["Sat", "Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+
+export const weekDaysOptions = weekDays.map((item) => ({
+  value: item,
+  label: item,
+}));

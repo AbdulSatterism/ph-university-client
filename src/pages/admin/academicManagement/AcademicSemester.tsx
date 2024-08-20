@@ -13,7 +13,7 @@ const AcademicSemester = () => {
   const { data: semesterData, isFetching } = useGetAllSemesterQuery(params);
 
   const tableData = semesterData?.data?.map(
-    ({ _id, year, startMonth, endMonth, name }) => ({
+    ({ _id, year, startMonth, endMonth, name }: TAcademicSemester) => ({
       key: _id,
       year,
       startMonth,
